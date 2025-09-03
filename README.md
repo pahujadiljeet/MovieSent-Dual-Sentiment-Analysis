@@ -34,7 +34,17 @@ This dual approach allows **real-time sentiment analysis**, helping studios, cri
 ✅ Supports 5000+ IMDB Movie Reviews dataset  
 
 ---
+## 🛠️ Tools & Libraries
 
+  1. Python (pandas, numpy)
+  2. NLTK, spaCy (text preprocessing)
+  3. scikit-learn (Logistic Regression, TF-IDF)
+  4. TensorFlow / Keras (LSTM)
+  5. Flask (Backend API + Frontend rendering)
+  6. Bootstrap / CSS (Frontend UI)
+  7. Joblib & H5 (Model saving/loading)
+
+     
 ## 📂 Project Structure  
 
 ```bash
@@ -60,14 +70,4 @@ MovieSent/
 │
 └── data/
     └── IMDB_Dataset.csv          # Movie reviews dataset (5000+ reviews)
-
-## 🛠️ Tools & Libraries
-
-  1. Python (pandas, numpy)
-  2. NLTK, spaCy (text preprocessing)
-  3. scikit-learn (Logistic Regression, TF-IDF)
-  4. TensorFlow / Keras (LSTM)
-  5. Flask (Backend API + Frontend rendering)
-  6. Bootstrap / CSS (Frontend UI)
-  7. Joblib & H5 (Model saving/loading)
 
