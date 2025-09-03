@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieSent Sentiment Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 MovieSent Sentiment Analysis</h1>
+        <form method="POST" action="/predict">
+            <textarea name="review" placeholder="✨ Type your movie review here..." rows="6" required>{{ review if review else "" }}</textarea>
+            
+            <select name="model" required>
+                <option value="" disabled selected>Select a model</option>
+                <option value="Logistic Regression">Logistic Regression</option>
+                <option value="LSTM">LSTM</option>
+            </select>
+            
+            <button type="submit">Analyze Sentiment 🚀</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result {{ prediction }}">
+                <h2>Prediction: {{ prediction|capitalize }}</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
